@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>Podcast 台本生成ツール</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="header">
+        <h1>Podcast 台本生成ツール</h1>
+        <nav>
+            <a href="{{ url_for('index') }}" class="nav-link">台本生成</a>
+        </nav>
+    </div>
+
+    <div class="main-content">
+        <form method="post" class="input-form">
+            <div class="form-group">
+                <label for="input_text">入力テキスト:</label>
+                <textarea id="input_text" name="input_text" rows="10" required>{{ input_text }}</textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="urls">参考URL:</label>
+                <textarea id="urls" name="urls" rows="5">{{ urls }}</textarea>
+            </div>
+
+            <div class="button-group">
+                <button type="submit" name="generate_script" class="btn primary">台本生成</button>
+                <button type="submit" name="create_json" class="btn primary">JSONコード作成</button>
+                <button type="submit" name="create_mp3" class="btn primary">MP3に出力</button>
+                {% if script_text %}
+                <button type="submit" name="summarize" class="btn primary">要約</button>
+                {% endif %}
+            </div>
+        </form>
+
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+            <div class="flash-messages">
+                {% for message in messages %}
+                    <div class="flash-message">{{ message }}</div>
+                {% endfor %}
+            </div>
+            {% endif %}
+        {% endwith %}
+
+        {% if script_text %}
+        <div class="output-section">
+            <h2>生成された台本</h2>
+            <div class="script-container">{{ script_text }}</div>
+        </div>
+        {% endif %}
+
+        {% if summary %}
+        <div class="output-section">
+            <h2>要約</h2>
+            <div class="summary-container">{{ summary }}</div>
+        </div>
+        {% endif %}
+    </div>
+</body>
+</html>
