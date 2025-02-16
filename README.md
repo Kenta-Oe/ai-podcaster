@@ -1,0 +1,1 @@
+{"content": "# AI Podcaster\n\nAIを使用してポッドキャストの台本を生成し、音声ファイルを作成するツール", "encoding": "utf-8"}
