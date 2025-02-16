@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>Podcast 台本生成ツール</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .editable-script {
+            width: 100%;
+            min-height: 300px;
+            padding: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 1rem;
+            line-height: 1.5;
+            resize: vertical;
+            font-family: inherit;
+        }
+
+        .script-controls {
+            margin-top: 10px;
+            text-align: right;
+        }
+
+        .mt-3 {
+            margin-top: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Podcast 台本生成ツール</h1>
+        <nav>
+            <a href="index.html" class="nav-link">台本生成</a>
+            <a href="history.html" class="nav-link">履歴</a>
+        </nav>
+    </div>
+
+    <div class="main-content">
+        <div class="content-wrapper">
+            <div class="form-section">
+                <form method="post" class="input-form" id="mainForm">
+                    <div class="form-group">
+                        <label for="input_text">入力テキスト（参考情報等）:</label>
+                        <textarea id="input_text" name="input_text" rows="10" required></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="urls">参考元URL（複数可、1行に1つ）:</label>
+                        <textarea id="urls" name="urls" rows="5"></textarea>
+                    </div>
+
+                    <div class="button-group">
+                        <button type="button" onclick="demoAlert()" class="btn primary">台本生成</button>
+                        <button type="button" onclick="demoAlert()" class="btn primary">JSONコード作成</button>
+                        <button type="button" onclick="demoAlert()" class="btn primary">MP3に出力</button>
+                    </div>
+                </form>
+
+                <div class="output-section">
+                    <h2>生成された台本のサンプル</h2>
+                    <div class="script-container">
+                        こんにちは、皆さん。ようこそ、私はホストの大江です。
+
+今回は、AIを活用したポッドキャスト生成ツールについてご紹介します。このツールは、テキストや参考URLから自動的に台本を生成し、その台本を音声に変換することができます。
+
+現在ご覧いただいているのはデモ版で、実際の機能は利用できませんが、本来の機能では以下のことが可能です：
+
+1. テキストから自然な台本を生成
+2. 生成された台本をJSONファイルとして保存
+3. OpenAI APIを使用して音声を生成
+4. BGM付きの完成したポッドキャストを作成
+
+今後もこうしたニュースの背景や影響について、皆さんと一緒に考えていきたいと思います。もしこのエピソードについてご意見や質問がありましたら、ぜひお寄せください。また、ポッドキャストを楽しんでいただけたなら、評価やレビューもお願いします。それでは、次回もお楽しみに。ありがとうございました。
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>※これはデモ用のページです。実際の機能は利用できません。</p>
+        <p>ソースコードは<a href="https://github.com/Kenta-Oe/ai-podcaster">GitHubリポジトリ</a>でご覧いただけます。</p>
+    </footer>
+
+    <script>
+        function demoAlert() {
+            alert('これはデモ版です。実際の機能は利用できません。\nGitHubリポジトリから完全版をご利用ください。');
+        }
+    </script>
+</body>
+</html>
