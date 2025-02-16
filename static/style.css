@@ -1,0 +1,190 @@
+.char-count {
+    font-size: 0.9rem;
+    color: #666;
+    margin-left: 1rem;
+}
+
+/* 全体のスタイル */
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #fff5ec;
+}
+
+/* ヘッダー */
+.header {
+    background-color: #e67e22;
+    color: #000000;
+    padding: 1rem 2rem;
+    margin-bottom: 2rem;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 1.8rem;
+}
+
+/* ナビゲーション */
+nav {
+    margin-top: 1rem;
+}
+
+.nav-link {
+    color: white;
+    text-decoration: none;
+    margin-right: 1.5rem;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.nav-link:hover {
+    background-color: #d35400;
+}
+
+/* メインコンテンツ */
+.main-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    margin-bottom: 2rem;
+}
+
+/* フォーム */
+.input-form {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin-bottom: 2rem;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: #000000;
+}
+
+.input-field,
+textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ffccaa;
+    border-radius: 4px;
+    font-size: 1rem;
+    box-sizing: border-box;
+    margin-bottom: 0.5rem;
+}
+
+/* プロンプト保存ボタン */
+.btn.prompt-save {
+    background-color: #2ecc71;
+    color: white;
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem;
+    margin-top: 0.5rem;
+}
+
+.btn.prompt-save:hover {
+    background-color: #27ae60;
+}
+
+/* ボタングループ */
+.button-group {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.btn {
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    white-space: nowrap;
+}
+
+.btn.primary {
+    background-color: #e67e22;
+    color: white;
+}
+
+.btn.primary:hover {
+    background-color: #d35400;
+}
+
+/* 出力セクション */
+.output-section {
+    margin-top: 2rem;
+    background-color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    overflow-x: auto;
+}
+
+.output-section h2 {
+    color: #d35400;
+    margin-top: 0;
+}
+
+/* スクリプト表示 */
+.script-container {
+    background-color: #fff5ec;
+    padding: 1.5rem;
+    border-radius: 4px;
+    white-space: pre-wrap;
+    overflow-x: auto;
+    max-width: 100%;
+    word-wrap: break-word;
+    font-family: monospace;
+}
+
+/* 要約表示 */
+.summary-container {
+    background-color: #fff5ec;
+    padding: 1.5rem;
+    border-radius: 4px;
+    white-space: pre-wrap;
+    overflow-x: auto;
+    max-width: 100%;
+    word-wrap: break-word;
+}
+
+/* フラッシュメッセージ */
+.flash-messages {
+    margin: 1rem 0;
+}
+
+.flash-message {
+    padding: 1rem;
+    border-radius: 4px;
+    background-color: #fef5e7;
+    color: #d35400;
+    margin-bottom: 0.5rem;
+}
+
+/* レスポンシブデザイン */
+@media (max-width: 768px) {
+    .main-content {
+        padding: 0 1rem;
+    }
+
+    .button-group {
+        flex-wrap: wrap;
+    }
+
+    .btn {
+        width: auto;
+        flex: 1 1 calc(50% - 0.5rem);
+    }
+}
