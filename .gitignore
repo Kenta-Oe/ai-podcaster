@@ -19,18 +19,20 @@ var/
 .installed.cfg
 *.egg
 
-# Environment
-.env
+# Virtual Environment
 venv/
 ENV/
 
-# IDE
+# IDEs
 .idea/
 .vscode/
 *.swp
 *.swo
+.project
+.pydevproject
 
 # Project specific
+.env
 *.mp3
 output/
 scratchpad/
